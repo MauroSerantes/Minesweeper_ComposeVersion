@@ -2,6 +2,7 @@
 
 _This is the game minesweeper for android.It is another way to implement minesweeper game using Jetpack Compose_
 
+
   
 #### Here some screeshots of the main presentation of the game
 ![Screenshot_20240519_131919](https://github.com/MauroSerantes/Minesweeper_ComposeVersion/assets/146656323/20c33f85-70ab-456b-89de-eb8f09a17fef)
@@ -10,18 +11,15 @@ _This is the game minesweeper for android.It is another way to implement mineswe
 
 
 
-
 ### Instructions for play 
 
-_The main game includes three command buttons: Reset Button, Dig Mode Button (Shovel), Flag Mode Button (Flag)._
+_For reveal the cells you must click on them._
 
-_When Dig Mode is activate you can reveal any cell exept the ones that are marked by a flag._
+_For mark the cells with a flag you need to make a long click on them_
 
-_When Flag Mode is activate you can mark or dismark any cell with a flag (The number of flags is equal to the total number of mines)_
+_Once you lose or win it will display the end game dialog. _
 
-_The reset button if for reset the game_
-
-#### Here some screeshots of the main game
+#### Here some screeshots of the Casual Game (mode) 
 
 ![Screenshot_20240519_131210](https://github.com/MauroSerantes/Minesweeper_ComposeVersion/assets/146656323/e937f24e-80c6-465f-ab30-a943ac5a5953)
 ![Screenshot_20240519_131246](https://github.com/MauroSerantes/Minesweeper_ComposeVersion/assets/146656323/440dc3e9-f7af-41f0-94ff-dfce7759a3c7)
