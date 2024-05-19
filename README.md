@@ -2,16 +2,21 @@
 
 _This is the game minesweeper for android.It is another way to implement minesweeper game using Jetpack Compose_
 
+  
+### About the app 📋
 
+_The main selection screen contains three principal options: Casual Game,Paying Modes and History.
+Playing Modes and History are not developed yet, wich means the app is not finish.
+In Casual Game you could select into three different levels of play: Beginner (64 tiles and 10 mines),
+Intermediate (256 tiles 40 mines) and Advanced (480 tiles and 99 mines)_
+_All this three modes of plays contains a mine counter and a timer._
   
 #### Here some screeshots of the main presentation of the game
 ![Screenshot_20240519_131919](https://github.com/MauroSerantes/Minesweeper_ComposeVersion/assets/146656323/20c33f85-70ab-456b-89de-eb8f09a17fef)
 ![Screenshot_20240519_131041](https://github.com/MauroSerantes/Minesweeper_ComposeVersion/assets/146656323/32173a3a-e39f-457b-9f78-b777019800fe)
 ![Screenshot_20240519_131110](https://github.com/MauroSerantes/Minesweeper_ComposeVersion/assets/146656323/5d8dd590-f1e6-486a-9457-f83c0f9b1701)
 
-
-
-### Instructions for play 
+### Instructions for play in Casual Game
 
 _For reveal the cells you must click on them._
 
@@ -28,18 +33,19 @@ _Once you lose or win it will display the end game dialog. _
 
 ## Tech Stack Used And Architectural pattern ⚙️
 
-* Xml (eXtensible Markup Language) - For the views
-* Navigation Component - For simple navigation between fragments
-* MVP(Model-View-Presenter) - Main Architecture pattern
+* Jetpack Compose - For the UI
+* Navigation Component - For navigation between screend
+* MVVM(Model-View-ViewModel) - Main Architecture pattern
 * Kotlin - The main language
 
 ### Personal Commentaries
-_I use MVP architecture with the finality of separate the logic of the game from the view._
-_With the use of MVP I create a main game presenter wich controlls all the logic of the game when_
-_the main view (Game Fragment) just show all user interactions._
+_This time i use MVVM because it was more easy to integrate with jetpack compose declarative ui._
+_The game view model controls all the logic of the game and provides a state updater based in the
+user actions._
+_The game works but it feels a kind of slow. It has to be the way that i implemented it. 
+I continue learning Jetpack Compose and all its features._
 
-_In the domain file there are some auxiliar classes and structures for made the game more_
-_simple to implement. These code is one of the multiple ways of implement the game._
+_I use the same auxiliar data structures for the development of the game._
 
 ## Authors ✒️
 
@@ -47,6 +53,5 @@ _simple to implement. These code is one of the multiple ways of implement the ga
 
 ## For The Future
 
-* Add a timer
-* Add an online mode
+* Finish all the app functionalities
 * Improve the UI
