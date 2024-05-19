@@ -19,3 +19,8 @@ val TransparentBlack = Color(0x99000000)
 val BrilliantRed = Color(0xFF8B1412)
 val WaterGreen = Color(0xFF84BAB0)
 val BrilliantYellow = Color(0xFFFFEA17)
+
+
+//this is for main colors theme
+
+val BlueBackground = Color(0xFF0B223A)

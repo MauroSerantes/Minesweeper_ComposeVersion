@@ -9,5 +9,6 @@ data class MinesWeeperCellUiDetails(
     var backgroundColor: Color,
     @DrawableRes
     var icon:Int?,
-    var numberOfMines:Int?
+    var numberOfMines:Int?,
+    var flip:Boolean
 )

@@ -40,7 +40,7 @@ fun EndGameDialog(
     onRetry: () -> Unit
 ) {
     Dialog(
-        onDismissRequest = onDismiss
+        onDismissRequest = {}
     ) {
         Box(
             modifier = Modifier

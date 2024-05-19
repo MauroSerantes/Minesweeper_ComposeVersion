@@ -19,6 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -26,6 +27,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
+import com.myapps.minesweepergame.ui.theme.BrilliantBlue
 import com.myapps.minesweepergame.ui.theme.DarkerBlue
 import com.myapps.minesweepergame.ui.theme.SoftBlue
 import com.myapps.minesweepergame.ui.theme.TransparentBlack
@@ -33,38 +35,33 @@ import com.myapps.minesweepergame.ui.theme.TransparentBlack
 @Composable
 fun NeoShadowButton(
     modifier: Modifier = Modifier,
-    buttonText:String,
-    onClickButton:()->Unit,
-    @DrawableRes
-    iconDefault:Int? = null
-){
-
+    buttonText: String,
+    onClickButton: () -> Unit,
+    @DrawableRes iconDefault: Int? = null,
+    backgroundColor: Color = Color.White,
+    textColor: Color = BrilliantBlue,
+    iconTint: Color = BrilliantBlue
+) {
     ElevatedButton(
         onClick = onClickButton,
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .height(50.dp)
-            .padding(4.dp)
-            .shadow(
-                elevation = 6.dp,
-                shape = CircleShape,
-                clip = false
-            ),
-        colors = ButtonDefaults.buttonColors(Color.White)
+            .padding(4.dp),
+        colors = ButtonDefaults.elevatedButtonColors(backgroundColor),
+        shape = RoundedCornerShape(10.dp)
     ) {
-
-        if(iconDefault!=null){
+        if (iconDefault != null) {
             Icon(
-                painterResource(id = iconDefault),
-                contentDescription ="",
-                tint = Color.Black,
-                modifier = Modifier
-                    .padding(end = 5.dp)
+                painter = painterResource(id = iconDefault),
+                contentDescription = null,
+                tint = iconTint,
+                modifier = Modifier.padding(end = 8.dp)
             )
         }
         Text(
             text = buttonText,
-            color = DarkerBlue,
+            color = textColor,
             fontSize = 18.sp,
             fontWeight = FontWeight.Bold,
             letterSpacing = 0.1.em

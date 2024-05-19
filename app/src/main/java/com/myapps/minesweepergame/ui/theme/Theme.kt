@@ -58,7 +58,6 @@ fun MinesweeperGameTheme(
         SideEffect {
             val window = (view.context as Activity).window
             window.statusBarColor = BrilliantBlue.toArgb()
-            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
         }
     }
 

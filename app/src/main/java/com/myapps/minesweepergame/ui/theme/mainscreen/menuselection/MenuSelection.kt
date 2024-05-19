@@ -1,5 +1,6 @@
 package com.myapps.minesweepergame.ui.theme.mainscreen.menuselection
 
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -17,7 +18,7 @@ import com.myapps.minesweepergame.ui.theme.mainscreen.utilscomposables.NeoShadow
 fun SelectionMenu(
     modifier: Modifier,
     navController: NavController
-){
+) {
 
     var isDifficultySelectorOpen by remember {
         mutableStateOf(false)
@@ -27,14 +28,22 @@ fun SelectionMenu(
         NeoShadowButton(buttonText = "Casual Game", onClickButton = {
             isDifficultySelectorOpen = true
         })
-        NeoShadowButton(buttonText = "Playing Modes", onClickButton = { },iconDefault = R.drawable.baseline_games_24)
-        NeoShadowButton(buttonText = "History", onClickButton = { },iconDefault = R.drawable.history_icon)
+        NeoShadowButton(
+            buttonText = "Playing Modes",
+            onClickButton = { },
+            iconDefault = R.drawable.baseline_games_24
+        )
+        NeoShadowButton(
+            buttonText = "History",
+            onClickButton = { },
+            iconDefault = R.drawable.history_icon
+        )
     }
 
     if(isDifficultySelectorOpen){
         GameDifficultySelectionDialog(
             title = "Difficulty Selection",
-            onDismiss = {isDifficultySelectorOpen = false},
+            onDismiss = { isDifficultySelectorOpen = false },
             navController = navController
         )
     }

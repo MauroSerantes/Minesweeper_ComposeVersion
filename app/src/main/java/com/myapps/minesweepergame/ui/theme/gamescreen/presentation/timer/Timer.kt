@@ -3,6 +3,11 @@ package com.myapps.minesweepergame.ui.theme.gamescreen.presentation.timer
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -16,17 +21,22 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.myapps.minesweepergame.ui.theme.BrilliantBlue
 import kotlinx.coroutines.delay
 import java.util.concurrent.TimeUnit
 
 
 @Composable
 fun Timer(
-    modifier: Modifier,
+    modifier: Modifier = Modifier,
     @DrawableRes
     drawable: Int,
     timerCommands: () -> TimerCommands,
+    contentColor:Color = BrilliantBlue,
+    containerColor:Color = Color.White
 ) {
 
     var time by remember {
@@ -59,31 +69,45 @@ fun Timer(
     }
 
     LaunchedEffect(isRunning) {
-        if(isReset) time = 0
-        while(isRunning){
+        if (isReset) time = 0
+        while (isRunning) {
             delay(1000)
             time += 1000
         }
     }
 
-    Row(
+
+    Card(
         modifier = modifier,
-        horizontalArrangement = Arrangement.SpaceAround,
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Icon(painter = painterResource(id = drawable), contentDescription = "", tint = Color.White)
-        Text(
-            text = formatTime(time = time),
-            color = Color.White,
-            fontSize = 16.sp,
-            fontWeight = FontWeight.Bold
+        shape = RoundedCornerShape(5.dp),
+        elevation = CardDefaults.cardElevation(5.dp),
+        colors = CardDefaults.cardColors(
+            contentColor = contentColor,
+            containerColor = containerColor
         )
+    ) {
+        Row(
+            modifier = Modifier
+                .padding(horizontal = 8.dp, vertical = 5.dp),
+            horizontalArrangement = Arrangement.SpaceAround,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                painter = painterResource(id = drawable),
+                contentDescription = "",
+            )
+            Text(
+                text = formatTime(time = time),
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Bold
+            )
+        }
     }
 }
 
 
 @Composable
-fun formatTime(time:Long): String {
+fun formatTime(time: Long): String {
 
     val minutes = TimeUnit.MILLISECONDS.toMinutes(time) % 60
     val seconds = TimeUnit.MILLISECONDS.toSeconds(time) % 60
