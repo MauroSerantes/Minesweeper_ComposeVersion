@@ -8,7 +8,8 @@ _This is the game minesweeper for android.It is another way to implement mineswe
 _The main selection screen contains three principal options: Casual Game,Paying Modes and History.
 Playing Modes and History are not developed yet, wich means the app is not finish.
 In Casual Game you could select into three different levels of play: Beginner (64 tiles and 10 mines),
-Intermediate (256 tiles 40 mines) and Advanced (480 tiles and 99 mines)_
+Intermediate (256 tiles 40 mines) and Advanced (480 tiles and 99 mines)._
+
 _All this three modes of plays contains a mine counter and a timer._
   
 #### Here some screeshots of the main presentation of the game
