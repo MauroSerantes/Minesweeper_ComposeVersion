@@ -18,9 +18,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.myapps.minesweepergame.EndGameDialog
-import com.myapps.minesweepergame.GameSettings
-import com.myapps.minesweepergame.Matrix
 import com.myapps.minesweepergame.R
 import com.myapps.minesweepergame.ui.theme.gamescreen.presentation.timer.TimerCommands
 import com.myapps.minesweepergame.ui.theme.Azure
@@ -29,6 +26,9 @@ import com.myapps.minesweepergame.ui.theme.BrilliantRed
 import com.myapps.minesweepergame.ui.theme.BrilliantYellow
 import com.myapps.minesweepergame.ui.theme.gamescreen.MinesWeeperCellUiDetails
 import com.myapps.minesweepergame.ui.theme.gamescreen.MinesWeeperGameState
+import com.myapps.minesweepergame.ui.theme.gamescreen.presentation.ending.EndGameDialog
+import com.myapps.minesweepergame.ui.theme.gamescreen.presentation.matrix.Matrix
+import com.myapps.minesweepergame.ui.theme.gamescreen.presentation.settings.GameSettings
 import com.myapps.minesweepergame.ui.theme.gamescreen.utils.Position
 
 

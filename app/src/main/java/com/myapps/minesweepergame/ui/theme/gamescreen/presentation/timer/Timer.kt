@@ -17,7 +17,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.myapps.minesweepergame.formatTime
 import kotlinx.coroutines.delay
 import java.util.concurrent.TimeUnit
 
